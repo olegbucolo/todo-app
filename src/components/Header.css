@@ -1,0 +1,39 @@
+:root {
+    --text-color: white;
+    --back-blue-01: blue;
+
+    --font-size-1-4: 1.4rem;
+    --font-size-2-0: 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li,
+a {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--back-blue-01);
+    width: 100%;
+    font-size: var(--font-size-1-4);
+    text-transform: uppercase;
+}
+
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2.5rem;
+}
+
+.main-nav li a{
+    padding: 1rem;
+    color: var(--text-color);
+}
