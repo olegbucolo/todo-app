@@ -7,9 +7,9 @@ export function Header() {
         <header>
             <nav className="main-nav">
                 <ul className="left">
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><a href="">Todos</a></li>
-                    <li><a href="">About</a></li>
+                    <li><NavLink to="/" className={({isActive}) => isActive ? 'active' : ''}>Home</NavLink></li>
+                    <li><NavLink to="/todos" className={({isActive}) => isActive ? 'active' : ''}>Todos</NavLink></li>
+                    <li><NavLink to="/about" className={({isActive}) => isActive ? 'active' : ''}>About</NavLink></li>
                 </ul>
                 <ul className="right">
                     <li><a href="">Login</a></li>
