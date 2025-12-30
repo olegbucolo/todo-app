@@ -1,15 +1,16 @@
 import './App.css'
-import {Header} from './components/Header'
-
+import { Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/home/HomePage';
+import { TodosPage } from './pages/todo/TodosPage';
 
 function App() {
 
   return (
-    <>
-      <Header/>
-      <h1>Hello world</h1>
-      <p>Lorem ipsum</p>
-    </>
+    <Routes>
+      <Route index element={<HomePage />} />
+      <Route path={"todos"} element={<TodosPage />} />
+    </Routes>
+
   )
 }
 
