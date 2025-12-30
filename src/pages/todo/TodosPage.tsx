@@ -1,9 +1,9 @@
-import { Header } from '../../components/Header';
+import { TodoList } from './TodoList';
 
 export function TodosPage() {
     return (
         <>
-            <Header />
+            <TodoList />
             <div>TODO PAGE</div>
         </>
     )

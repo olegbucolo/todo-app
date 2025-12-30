@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "completed": false,
+        "content": "Do laundry",
+        "date": 1700000000000,
+        "difficulty": 2
+    },
+    {
+        "id": "2",
+        "completed": true,
+        "content": "Buy groceries",
+        "date": 1700050000000,
+        "difficulty": 1
+    },
+    {
+        "id": "3",
+        "completed": false,
+        "content": "Finish React todo app",
+        "date": 1700100000000,
+        "difficulty": 3
+    },
+    {
+        "id": "234672",
+        "completed": false,
+        "content": "Do think ",
+        "date": 1700000000000,
+        "difficulty": 2
+    }
+]

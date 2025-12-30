@@ -38,6 +38,17 @@ header {
 }
 
 .active{
-    font-weight: bold;
-    text-decoration: underline;
+    position: relative;
+}
+
+.active::before{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: .2rem;
+    background-color: var(--text-color);
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
