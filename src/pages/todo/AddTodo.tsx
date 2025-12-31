@@ -1,3 +1,5 @@
+import './AddTodo.css';
+
 interface AddTodoProps {
     isOpen: boolean;
 }

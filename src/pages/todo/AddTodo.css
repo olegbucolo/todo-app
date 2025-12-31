@@ -1,0 +1,26 @@
+.todo-input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: height .4s ease, margin .4s ease, opacity .4s ease;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.todo-input-group.show {
+    margin: 2rem 0;
+    opacity: 1;
+    transition: height .4s ease, margin .4s ease, opacity .4s ease;
+    height: 20rem;
+}
+
+.todo-input {
+    height: 20rem;
+    padding: 1rem;
+    flex: 1;
+}
+
+.todo-input-add {
+    margin-left: 2rem;
+}
