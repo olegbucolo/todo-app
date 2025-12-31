@@ -10,7 +10,7 @@ export function TodoList() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <section className="todo-list">
-            <TodoHeader onToggle={() => setIsOpen (v => !v)} />
+            <TodoHeader onToggle={() => setIsOpen (v => !v)} isOpen={isOpen} />
             <ul>
                 <div className={`todo-input-group ${isOpen ? 'show' : ''}`}>
                     <textarea className="todo-input" />
