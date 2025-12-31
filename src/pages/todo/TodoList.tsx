@@ -11,6 +11,10 @@ export function TodoList() {
         <section className="todo-list">
             <TodoHeader />
             <ul>
+                <div className="todo-input-group show">
+                    <textarea className="todo-input" />
+                    <button className="todo-input-add">Add</button>
+                </div>
                 {todos.map((todo) => {
                     return <TodoItem todo={todo} />
                 })}
