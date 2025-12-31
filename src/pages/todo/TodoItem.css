@@ -1,0 +1,29 @@
+.todo-li{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    margin: 1rem 0;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    font-size: 1.4rem;
+}
+
+.todo-details{
+    position: absolute;
+    bottom: 0;
+}
+
+.todo-actions{
+    margin: 0 2rem;
+    display: inline;
+}
+
+button{
+    display: inline;
+}
+
+.todo-text{
+    flex: 1
+}
