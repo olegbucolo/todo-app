@@ -13,6 +13,7 @@ export function TodoItem({ todo }: TodoItemProps) {
             <div className="todo-actions">
                 <button>Modify</button>
                 <button>Done</button>
+                <button>Delete</button>
             </div>
             <div className="todo-details">
                 <span>id: {todo.id}</span>
