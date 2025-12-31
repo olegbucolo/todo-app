@@ -1,10 +1,14 @@
 import './TodoHeader.css';
 
-export function TodoHeader(){
+interface TodoHeaderProps {
+    onToggle: () => void;
+}
+
+export function TodoHeader({onToggle}: TodoHeaderProps){
     return (
         <div className="todos-header">
             <h1>My todo List</h1>
-            <button>Add Todo</button>
+            <button onClick={onToggle}>Add Todo</button>
         </div>
     )
 }

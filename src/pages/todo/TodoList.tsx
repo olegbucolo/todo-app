@@ -7,11 +7,12 @@ import { TodoItem } from './TodoItem';
 
 export function TodoList() {
     const [todos, setTodos] = useState<Todo[]>(rawTodoData as Todo[])
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <section className="todo-list">
-            <TodoHeader />
+            <TodoHeader onToggle={() => setIsOpen (v => !v)} />
             <ul>
-                <div className="todo-input-group show">
+                <div className={`todo-input-group ${isOpen ? 'show' : ''}`}>
                     <textarea className="todo-input" />
                     <button className="todo-input-add">Add</button>
                 </div>
