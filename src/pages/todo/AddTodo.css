@@ -23,4 +23,6 @@
 
 .todo-input-add {
     margin-left: 2rem;
+    background-color: green;
+    color: white;
 }

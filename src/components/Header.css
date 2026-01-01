@@ -1,6 +1,6 @@
 :root {
     --text-color: white;
-    --back-blue-01: blue;
+    --back-blue-01: green;
 
     --font-size-1-4: 1.4rem;
     --font-size-2-0: 2rem;
@@ -28,8 +28,10 @@ header {
 
 .main-nav {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 0 2.5rem;
+    height: 6rem;
 }
 
 .main-nav li a{
