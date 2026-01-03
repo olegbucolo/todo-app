@@ -20,9 +20,7 @@ const handleAdd = () => {
       date: Date.now(),
       difficulty: 1,
     };
-    console.log('before',isOpen)
-    setIsOpen(v => !v)
-    console.log('after',isOpen)
+    setIsOpen(false)
     setTodos(prev => [newTodo, ...prev]);
     setContent('');
   };

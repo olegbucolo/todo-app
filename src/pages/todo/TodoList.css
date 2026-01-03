@@ -14,3 +14,11 @@ button:active{
     transform: scale(0.96);
 
 }
+
+.modify-todo-area{
+    flex: 1;
+}
+
+.todo-text{
+    /* display: none; */
+}
