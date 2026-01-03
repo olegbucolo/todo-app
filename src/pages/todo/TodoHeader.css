@@ -1,13 +1,12 @@
 .todos-header {
     height: 10rem;
-    background-color: green;
+    background-color: #195919;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
     border-top-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-
 }
 
 .todos-header h1 {

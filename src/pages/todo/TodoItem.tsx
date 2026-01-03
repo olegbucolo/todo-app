@@ -16,7 +16,7 @@ export function TodoItem({ todo, onUpdate, onDelete, onComplete }: TodoItemProps
     const [draft, setDraft] = useState(todo.content);
 
     return (
-        <li className="todo-li" style={{ backgroundColor: todo.completed ? 'green' : 'red' }}>
+        <li className="todo-li" style={{ backgroundColor: todo.completed ? '#195919' : '#700000' }}>
             {isChanging ? (
                 <textarea
                     className="modify-todo-area"
