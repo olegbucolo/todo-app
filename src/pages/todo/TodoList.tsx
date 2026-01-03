@@ -15,11 +15,15 @@ export function TodoList() {
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos))
     }, [todos])
-    
+
     const [isOpen, setIsOpen] = useState(false);
 
     const updateTodo = (id: string, content: string) => {
-        setTodos(prev => prev.map(t => t.id === id ? {...t, content} : t))
+        setTodos(prev => prev.map(t => t.id === id ? { ...t, content } : t))
+    }
+
+    const deleteTodo = (id: string) => {
+        setTodos(prev => prev.filter(t => t.id !== id))
     }
 
     return (
@@ -28,7 +32,11 @@ export function TodoList() {
             <AddTodo isOpen={isOpen} setIsOpen={setIsOpen} setTodos={setTodos} />
             <ul>
                 {todos.map((todo) => {
-                    return <TodoItem key={todo.id} todo={todo} onUpdate={updateTodo}/>
+                    return <TodoItem
+                        key={todo.id}
+                        todo={todo}
+                        onUpdate={updateTodo} 
+                        onDelete={deleteTodo}/>
                 })}
             </ul>
         </section>

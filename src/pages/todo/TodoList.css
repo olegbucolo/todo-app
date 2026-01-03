@@ -3,22 +3,21 @@
     height: 10rem;
 }
 
-button{
+button {
     padding: .6rem 1.2rem;
     border: none;
-    box-shadow:  0rem 0rem .5rem 0rem black;
+    box-shadow: 0rem 0rem .5rem 0rem black;
     cursor: pointer;
 }
 
-button:active{
+button:active {
     transform: scale(0.96);
 
 }
 
-.modify-todo-area{
+.modify-todo-area {
     flex: 1;
-}
-
-.todo-text{
-    /* display: none; */
+    resize: none;
+    overflow: hidden;
+    padding: 1rem;
 }
