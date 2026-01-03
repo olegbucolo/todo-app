@@ -26,6 +26,15 @@ export function TodoList() {
         setTodos(prev => prev.filter(t => t.id !== id))
     }
 
+    const completeTodo = (id: string) => {
+        setTodos(prev =>
+            prev.map(t =>
+                t.id === id ? { ...t, completed: !t.completed } : t
+            )
+        );
+
+    }
+
     return (
         <section className="todo-list">
             <TodoHeader onToggle={() => setIsOpen(v => !v)} isOpen={isOpen} />
@@ -35,8 +44,10 @@ export function TodoList() {
                     return <TodoItem
                         key={todo.id}
                         todo={todo}
-                        onUpdate={updateTodo} 
-                        onDelete={deleteTodo}/>
+                        onUpdate={updateTodo}
+                        onDelete={deleteTodo}
+                        onComplete={completeTodo}
+                    />
                 })}
             </ul>
         </section>

@@ -7,15 +7,16 @@ interface TodoItemProps {
     todo: Todo;
     onUpdate: (id: string, content: string) => void;
     onDelete: (id: string) => void;
+    onComplete: (id: string) => void;
 }
 
-export function TodoItem({ todo, onUpdate, onDelete }: TodoItemProps) {
+export function TodoItem({ todo, onUpdate, onDelete, onComplete }: TodoItemProps) {
 
     const [isChanging, setIsChanging] = useState(false)
     const [draft, setDraft] = useState(todo.content);
 
     return (
-        <li className="todo-li">
+        <li className="todo-li" style={{ backgroundColor: todo.completed ? 'green' : 'red' }}>
             {isChanging ? (
                 <textarea
                     className="modify-todo-area"
@@ -36,12 +37,14 @@ export function TodoItem({ todo, onUpdate, onDelete }: TodoItemProps) {
                         if (isChanging) onUpdate(todo.id, draft);
                         setIsChanging(t => !t)
                     }}>
-                        {isChanging ? "Done" : "Modify"}
+                    {isChanging ? "Done" : "Modify"}
                 </button>
                 <button
                     onClick={() => onDelete(todo.id)}>Delete
                 </button>
-                <button>Completed</button>
+                <button
+                    onClick={ () => onComplete(todo.id)}
+                >{todo.completed ? 'Completed' : 'Complete'}</button>
             </div>
             <div className="todo-details">
                 <span>id: {todo.id}</span>

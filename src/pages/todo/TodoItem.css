@@ -37,3 +37,10 @@ button{
 .todo-text{
     flex: 1
 }
+
+.modify-todo-area {
+    flex: 1;
+    resize: none;
+    overflow: hidden;
+    padding: 1rem;
+}

@@ -12,12 +12,5 @@ button {
 
 button:active {
     transform: scale(0.96);
-
 }
 
-.modify-todo-area {
-    flex: 1;
-    resize: none;
-    overflow: hidden;
-    padding: 1rem;
-}
