@@ -2,19 +2,30 @@ import './TodoList.css'
 import { useState, useEffect } from 'react';
 import type { Todo } from '../../types/todo';
 import { AddTodo } from './AddTodo';
-import rawTodoData from '../../data/TodoData.json'
 import { TodoHeader } from './TodoHeader';
 import { TodoItem } from './TodoItem';
+import { getTodos, saveTodos } from '../../features/dataService';
 
 export function TodoList() {
-    const [todos, setTodos] = useState<Todo[]>(() => {
-        const stored = localStorage.getItem('todos');
-        return stored ? (JSON.parse(stored) as Todo[]) : rawTodoData as Todo[]
-    })
+    const [todos, setTodos] = useState<Todo[]>([])
+    const [loading, setLoading] = useState(true);
+    const [initialized, setInitialized] = useState(false);
 
     useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos))
-    }, [todos])
+        const fetchTodos = async () => {
+            setLoading(true);
+            const data = await getTodos();
+            setTodos(data);
+            setLoading(false)
+            setInitialized(true);
+        }
+        fetchTodos();
+    }, [])
+
+    useEffect(() => {
+        if (!initialized) return;
+        saveTodos(todos);
+    }, [todos]);
 
     const [isOpen, setIsOpen] = useState(false);
 
