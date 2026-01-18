@@ -4,7 +4,7 @@ import type { Todo } from '../../types/todo';
 import { AddTodo } from './AddTodo';
 import { TodoHeader } from './TodoHeader';
 import { TodoItem } from './TodoItem';
-import { getTodos, saveTodos } from '../../features/dataService';
+import { getTodos, persistTodos } from '../../features/todos/dataService';
 
 export function TodoList() {
     const [todos, setTodos] = useState<Todo[]>([])
@@ -24,7 +24,7 @@ export function TodoList() {
 
     useEffect(() => {
         if (!initialized) return;
-        saveTodos(todos);
+        persistTodos(todos);
     }, [todos]);
 
     const [isOpen, setIsOpen] = useState(false);
